@@ -1,0 +1,106 @@
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1410;
+$md1: $maxWidthContainer+12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+@import "reset.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "typography.scss";
+@import "scrollbar.scss";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: $black;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: inherit;
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-title {
+  font-size: 100px;
+  line-height: 110px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 500;
+}
+
+.button {
+  display: inline-block;
+  padding: 18px 30px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: $black;
+  background-color: $white;
+  border: 2px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+
+  &:hover {
+    color: $white;
+    background-color: $red;
+    border-color: $red;
+    box-shadow: 0 0 5px $red;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: lighten($red, 5%);
+  }
+
+  &:active {
+    color: $white;
+    background-color: darken($red, 5%);
+  }
+}
+
+.button-price {
+  color: $white;
+  background: transparent;
+}
